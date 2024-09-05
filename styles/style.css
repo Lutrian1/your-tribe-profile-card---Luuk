@@ -1,4 +1,75 @@
-* {
-  box-sizing: border-box;
+*{
+    color: Black;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
 }
 
+html{    
+    background-color: rgb(240, 186, 255)
+}
+
+main {
+    /* Position fixed zodat bij de browser verkleien de grootte blijft staan */
+    position:fixed;
+    width:40em;
+    height:20em;
+    padding: 2em;
+    margin: 15em 30em 30em;
+    background-color: white;
+    border: solid;
+    border-color: black;
+    border-width: 0.3em;
+    border-radius: 25px;
+    text-align: left;
+    padding-left: 5em;
+}
+
+h1{
+    font-family: 'Times New Roman', Times, serif;
+    position: absolute;
+    margin-left: 2em;
+    margin-top: -0.1em;
+    font-size: 1.5em;
+    align-items: flex-start;
+}
+
+h2{
+    padding-top: 1em;
+}
+
+ul{
+     margin-left: 0.3em;
+}
+
+#imghvalogo{
+    position: absolute;
+    width: 50px;
+    margin-left: -1em;
+    margin-top: -0.8em;
+}
+
+#pasfoto{
+    width: 200px;
+}
+
+section{
+    margin-top: 3em;
+}
+
+nav{
+    margin-top: 1em;
+}
+
+button{
+    position: absolute;
+    margin: -10em;
+}
+
+.rgb1{
+    background-color: aqua;
+}
+
+
+.rgb2{
+    background-color: red;
+}
