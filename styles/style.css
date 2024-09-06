@@ -1,44 +1,76 @@
-*{
+* :not(#background){
     color: Black;
     font-family: Arial, Helvetica, sans-serif;
-    list-style: none;
+    z-index: 1; /* alles behalve de achtergrond voor */
 }
 
 html{    
-    background-color: rgb(240, 186, 255)
+    height: 100%;
+    background-color: rgb(240, 186, 255);
+    display: flex;
+    justify-content: center; 
+    align-items: center; /* Centerd body */
+    margin: 0;
 }
 
-main {
-    /* Position fixed zodat bij de browser verkleien de grootte blijft staan */
+body{
+    /* Position relative zodat hij kan staan in het midden */
     position:fixed;
     width:40em;
     height:20em;
-    padding: 2em;
-    margin: 15em 30em 30em;
     background-color: white;
     border: solid;
     border-color: black;
     border-width: 0.3em;
     border-radius: 25px;
-    text-align: left;
-    padding-left: 5em;
+    padding: 3em;
+}
+
+body::before { /* lijn boven boven */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0; 
+    width: 100%;
+    height: 2.5em; /* grootte */
+    background-color: black;
+    border-radius: 21px 21px 0 0; /* radius alleen aan de bovenkant */
+    z-index: 1; /* voor het plaatje */
+}
+
+body::after { /* lijn onder*/
+    content: '';
+    position: absolute;
+    margin-top: 2.6em;
+    left: 0; 
+    width: 100%;
+    height: 2.5em; /* grootte */
+    background-color: black;
+    border-radius: 0 0 21px 21px; /* radius alleen aan de onderkant */
+    z-index: 1; /* voor het plaatje */
+}
+
+section{
+    margin-top: 3em;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between; 
 }
 
 h1{
-    font-family: 'Times New Roman', Times, serif;
     position: absolute;
     margin-left: 2em;
     margin-top: -0.1em;
     font-size: 1.5em;
-    align-items: flex-start;
-}
-
-h2{
-    padding-top: 1em;
 }
 
 ul{
      margin-left: 0.3em;
+}
+
+li{
+    margin-top: 0.5em;
 }
 
 #imghvalogo{
@@ -48,12 +80,19 @@ ul{
     margin-top: -0.8em;
 }
 
-#pasfoto{
-    width: 200px;
+#background{
+    position: absolute;
+    width: 100%; /* 100% van de main */
+    margin: -3em; /* afstand van padding body eraf zodat ie perfect start bij het begin van de body */
 }
 
-section{
-    margin-top: 3em;
+.rechterselectie{
+    padding-right: 2em;
+}
+
+#pasfoto{
+    width: 150px;
+    border: 5px solid black;
 }
 
 nav{
